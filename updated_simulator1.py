@@ -34,7 +34,8 @@ from PyQt5.QtCore import Qt, QTimer
 GLOBAL_ERROR_ACTIVE = False
 
 # 로그 파일 경로 (로그 기록은 운영 이벤트에 대해 남김)
-LOG_FILE_PATH = r"C:\Users\XOMIN\Downloads\error_log.csv"
+current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+LOG_FILE_PATH = f"logs/{current_time}.log"
 
 def init_log_file():
     if not os.path.exists(LOG_FILE_PATH):
